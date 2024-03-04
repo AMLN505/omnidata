@@ -15,7 +15,6 @@ const browserSync = require('browser-sync').create()
 const sass = require('sass')
 const gulpSass = require('gulp-sass')
 const webpackStream = require('webpack-stream')
-const ghPages = require('gulp-gh-pages');
 
 
 const mainSass = gulpSass(sass);
@@ -191,11 +190,6 @@ const images = () => {
         .pipe(image())
         .pipe(dest('dist/images'))
 }
-
-task('deploy', function() {
-  return src('./dist/**/*')
-    .pipe(ghPages());
-});
 
 watch('src/**/*.html', htmlMinifyDev)
 watch('src/styles/**/*.scss', stylesDev)
