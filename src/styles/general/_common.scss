@@ -1,0 +1,130 @@
+@import './mixin.scss';
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+a,
+button,
+input {
+    @include clearStandart();
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+@font-face {
+    font-family: 'Inter Tight';
+    font-display: swap;
+    src: local('InterTightMedium'), local('InterTight-Medium'),
+        url('../fonts/InterTight-Medium.woff2'),
+        url('../fonts/InterTight-Medium.woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  font-display: swap;
+  src: local('InterTightSemiBold'), local('InterTight-SemiBold'),
+      url('../fonts/InterTight-SemiBold.woff2'),
+      url('../fonts/InterTight-SemiBold.woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    font-display: swap;
+    src: local('ManropeBold'), local('Manrope-Bold'),
+        url('../fonts/Manrope-Bold.woff2'),
+        url('../fonts/Manrope-Bold.woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-display: swap;
+  src: local('ManropeSemibold'), local('Manrope-Semibold'),
+      url('../fonts/Manrope-Semibold.woff2'),
+      url('../fonts/Manrope-Semibold.woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-display: swap;
+  src: local('ManropeMedium'), local('Manrope-Medium'),
+      url('../fonts/Manrope-Medium.woff2'),
+      url('../fonts/Manrope-Medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-display: swap;
+  src: local('ManropeRegular'), local('Manrope-Regular'),
+      url('../fonts/Manrope-Regular.woff2'),
+      url('../fonts/Manrope-Regular.woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    min-width: 375px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: $fs24;
+    font-weight: $fw400;
+    color: $color000;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+.disable-visible {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+

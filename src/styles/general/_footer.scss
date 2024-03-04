@@ -1,0 +1,300 @@
+@import './mixin.scss';
+
+.footer {
+  background-color: $color2B2B2B;
+
+  &__container {
+    @include container();
+    padding: 45px 100px 36px 100px;
+    @include grid();
+    @include relative();
+    grid-template-columns: 1.15fr 1.48fr 2.23fr 0.5fr;
+    grid-template-areas:
+    'footer_logo footer_menu footer_contacts footer_contacts'
+    'footer_divider footer_divider footer_divider footer_divider'
+    'footer_info footer_info footer_info footer_button';
+    column-gap: 30px;
+    row-gap: 55px;
+    color: $colorFFFFFF;
+  }
+
+  &__logo {
+    grid-area: footer_logo;
+    width: 175px;
+    height: max-content;
+  }
+
+  &__menu {
+    grid-area: footer_menu;
+    font-size: $fs24;
+    font-weight: $fw700;
+    line-height: 120%;
+    letter-spacing: -0.7px;
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__menu-link,
+  &__contact-link,
+  &__info-link,
+  &__link {
+    transition: color $transition-time $timing-function;
+  }
+
+  &__menu-link:hover,
+  &__contact-link:hover,
+  &__info-link:hover,
+  &__link:hover,
+  &__close-button:hover,
+  &__menu-link:focus-visible,
+  &__contact-link:focus-visible,
+  &__info-link:focus-visible,
+  &__link:focus-visible,
+  &__close-button:focus-visible,
+  &__menu-link:active,
+  &__contact-link:active,
+  &__info-link:active,
+  &__link:active,
+  &__close-button:active  {
+    color: $colorFC4807;
+  }
+
+  &__contacts-list {
+    grid-area: footer_contacts;
+    line-height: 120%;
+    font-size: $fs18;
+    letter-spacing: -0.5px;
+  }
+
+  &__contact-item {
+    @include flexCenterAlign();
+  }
+
+  &__contact-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__contact-logo {
+    margin-right: 15px;
+    height: 20px;
+    min-width: 20px;
+    width: 20px;
+  }
+
+  &__info {
+    grid-area: footer_info;
+    @include grid();
+    grid-template-columns: 1.15fr 1.48fr 2.23fr;
+    gap: 30px;
+    font-size: $fs18;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+  }
+
+  &__link {
+    grid-area: footer_button;
+    max-width: max-content;
+    justify-self: end;
+  }
+
+  &__divider {
+    grid-area: footer_divider;
+    width: 100%;
+    height: 1px;
+    background-color: $colorFFFFFF;
+  }
+
+  &__close-button {
+    display: none;
+    @include absolute();
+    top: 30px;
+    right: 60px;
+    transition: $transition-time $timing-function;
+  }
+
+  @media (max-width: 1620px) {
+    &__container {
+      gap: 50px;
+      padding: 50px 100px 83px;
+    }
+
+    &__info {
+      gap: 50px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      'footer_logo footer_menu'
+      'footer_button footer_button'
+      'footer_divider footer_divider'
+      'footer_info footer_contacts';
+    }
+
+    &__logo-img {
+      width: 175px;
+      height: 22px;
+    }
+
+    &__link {
+      justify-self: center;
+    }
+
+    &__info {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      max-width: 230px;
+      padding-left: 33px;
+    }
+
+    &__contact-logo {
+      margin-right: 30px;
+    }
+
+    &__container.active {
+      @include ghost();
+      row-gap: 48px;
+      transform: translateX(-100%);
+      z-index: 20000;
+      padding: 30px 100px 36px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      'footer_logo'
+      'footer_menu'
+      'footer_divider'
+      'footer_contacts'
+      'footer_info';
+      width: 100%;
+      height: 100vh;
+      background-color: $color4C4C4C;
+      overflow: scroll;
+      left: -200%;
+    }
+
+    &__container.active &__link {
+      display: none;
+    }
+
+    &__container.active &__menu {
+      font-size: $fs18;
+      font-weight: $fw600;
+    }
+
+    &__container.active &__menu-item {
+      @include relative();
+    }
+
+    &__container.active &__menu-link::before {
+      @include absolute();
+      content: '';
+      z-index: -1;
+      top: -24px;
+      bottom: -24px;
+      left: -60px;
+      right: -60px;
+      background-color: transparent;
+      transition: background-color $transition-time $timing-function;
+    }
+
+    &__container.active &__menu-link:hover,
+    &__container.active &__menu-link:focus-visible,
+    &__container.active &__menu-link:active {
+      color: $colorFFFFFF;
+    }
+
+    &__container.active &__menu-link:hover:before,
+    &__container.active &__menu-link:focus-visible:before,
+    &__container.active &__menu-link:active:before {
+      background-color: $color2B2B2B;
+    }
+
+    &__container.active &__menu-item:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    &__container.active &__info {
+      max-width: none;
+      color: $colorA4A4A4;
+    }
+
+    &__container.active &__close-button {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__container {
+      padding: 45px 60px 96px;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-areas:
+      'footer_logo footer_menu'
+      'footer_contacts footer_contacts'
+      'footer_divider footer_divider'
+      'footer_info footer_button';
+      column-gap: 40px;
+      row-gap: 35px;
+    }
+
+    &__container.active {
+      padding: 30px 60px 36px;
+    }
+
+    &__logo-img {
+      width: 160px;
+      height: 20px;
+    }
+
+    &__link {
+      justify-self: end;
+      margin-right: 60px;
+    }
+
+    &__contact-logo {
+      margin-right: 20px;
+    }
+
+    &__info {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__container {
+      padding: 30px 20px 58px;
+      grid-template-columns: 1fr 33px;
+      grid-template-areas:
+      'footer_logo footer_logo'
+      'footer_menu footer_menu'
+      'footer_contacts footer_contacts'
+      'footer_divider footer_divider'
+      'footer_info footer_button';
+      row-gap: 50px;
+    }
+
+    &__link {
+      margin-right: 0;
+    }
+
+    &__info {
+      font-size: $fs16;
+    }
+
+    &__container.active {
+      padding: 30px 24px 36px;
+    }
+
+    &__container.active &__close-button {
+      display: block;
+      right: 24px;
+    }
+
+    &__container.active &__menu-link::before {
+      left: -24px;
+      right: -24px;
+    }
+  }
+}

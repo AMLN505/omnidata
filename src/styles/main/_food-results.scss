@@ -1,0 +1,102 @@
+@import '../general/mixin.scss';
+
+.food-results {
+  @include results();
+  background-color: $colorA4A4A4;
+
+  &__container {
+    padding-top: 70px;
+    grid-template-areas:
+    'res_main-heading res_heading'
+    'res_improvements res_improvements';
+  }
+
+  &__main-heading {
+    grid-area: res_main-heading;
+    max-width: 600px;
+    font-size: $fs49;
+    font-weight: $fw700;
+    line-height: 110%;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+
+  &__selected-text {
+    color: $colorFFFFFF;
+  }
+
+  &__improvement-heading {
+    color: $colorFFFFFF;
+  }
+
+  &__improvement-value {
+    color: $colorF4F35A;
+  }
+
+  @media (max-width: 1620px) {
+    &__container {
+      padding-top: 64px;
+      padding-bottom: 76px;
+    }
+
+    &__main-heading {
+      font-size: $fs37;
+    }
+  }
+
+  @media (max-width: 1280px) {
+
+    &__container {
+      padding-top: 145px;
+      padding-bottom: 170px;
+    }
+
+    &__main-heading {
+      margin-bottom: 118px;
+      font-size: $fs49;
+    }
+
+    &__heading {
+      margin-bottom: 130px;
+    }
+
+    &__improvement-item {
+      @include flexColumn();
+      align-items: center;
+    }
+
+    &__improvement-item:not(:last-child) {
+      margin-bottom: 140px;
+    }
+
+    &__improvement-heading {
+      max-width: none;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__container {
+      padding-top: 54px;
+      padding-bottom: 84px;
+    }
+
+    &__main-heading {
+      margin-bottom: 82px;
+      font-size: $fs20;
+      letter-spacing: -1px;
+    }
+
+    &__heading {
+      margin-bottom: 98px;
+    }
+
+    &__improvement-item:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    &__improvement-heading {
+      max-width: 200px;
+    }
+  }
+}

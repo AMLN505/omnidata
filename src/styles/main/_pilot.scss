@@ -1,0 +1,193 @@
+@import '../general/mixin.scss';
+
+.pilot {
+
+  &__container {
+    @include relative();
+    @include container();
+    padding: 102px 100px 337px 100px;
+    background: linear-gradient(
+      to right,
+      $colorF4F35A 25%,
+      $colorFFFFFF 25%,
+      $colorFFFFFF 75%
+    );
+  }
+
+  &__heading {
+    margin-bottom: 78px;
+    font-size: $fs70;
+    font-weight: $fw500;
+    line-height: 92%;
+    letter-spacing: -4px;
+  }
+
+  &__list {
+    @include grid();
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    justify-content: center;
+  }
+
+  &__item-img {
+    width: max-content;
+    height: 110px;
+    margin-bottom: 56px;
+  }
+
+  &__item-text {
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 125%;
+  }
+
+  &__selected-text {
+    font-weight: $fw700;
+  }
+
+  &__button {
+    @include absolute();
+    @include orangeButton();
+    bottom: 0;
+    right: 0;
+    padding: 63px 65px;
+    width: 50%;
+    max-width: 960px;
+    font-size: $fs24;
+    background-color: $color2B2B2B;
+    border-color: $color2B2B2B;
+    transition: border-color $transition-time $timing-function, background-color $transition-time $timing-function;
+  }
+
+  &__button:hover:not(:disabled),
+  &__button:focus-visible:not(:disabled),
+  &__button:active:not(:disabled) {
+    background-color: $color000;
+    border-color: $color000;
+  }
+
+  @media (max-width: 1620px) {
+    &__container {
+      padding: 74px 100px 213px 100px;
+    }
+
+    &__list {
+      gap: 50px;
+    }
+
+    &__button {
+      padding: 54px;
+      font-size: $fs16;
+    }
+
+    &__button-img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__item-text {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__container {
+      background: $colorF4F35A;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 180px;
+    }
+
+    &__item-img {
+      margin-bottom: 95px;
+    }
+
+    &__item-text {
+      max-width: 450px;
+    }
+
+  }
+
+  @media (max-width: 1000px) {
+    &__container {
+      background: $colorF4F35A;
+      padding: 83px 60px 325px 60px;
+      text-align: center;
+    }
+
+    &__heading {
+      margin-bottom: 106px;
+      font-size: $fs60;
+      letter-spacing: -2px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 85px;
+    }
+
+    &__list-item {
+      @include flexColumn();
+      align-items: center;
+    }
+
+    &__item-text {
+      max-width: 620px;
+      font-size: $fs18;
+    }
+
+    &__item-img {
+      margin-bottom: 80px;
+    }
+
+    &__button {
+      width: calc(100% - 120px);
+      max-width: none;
+      bottom: 55px;
+      left: 60px;
+      top: auto;
+      padding: 65px;
+      font-size: $fs24;
+    }
+
+    &__button-img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__container {
+      padding: 50px 20px 280px 20px;
+      text-align: center;
+    }
+
+    &__heading {
+      margin-bottom: 115px;
+      font-size: $fs40;
+    }
+
+    &__list {
+      gap: 115px;
+    }
+
+    &__item-img {
+      margin-bottom: 75px;
+    }
+
+    &__item-text {
+      font-size: $fs18;
+    }
+
+    &__button {
+      width: calc(100% - 40px);
+      left: 20px;
+      bottom: 60px;
+      padding: 35px 40px;
+      font-size: $fs18;
+    }
+  }
+}

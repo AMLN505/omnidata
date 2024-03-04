@@ -1,0 +1,182 @@
+@import '../general/mixin.scss';
+
+.leaders {
+  margin-bottom: 113px;
+
+  &__container {
+    @include container();
+    padding: 0 30px;
+  }
+
+  &__heading {
+    @include blockTitle();
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: start;
+  }
+
+  &__list-item {
+    width: 33.33%;
+    @include flexColumn();
+    align-items: center;
+    text-align: start;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    object-fit: cover;
+  }
+
+  &__item-content {
+    padding: 0 30px;
+    max-width: 500px;
+  }
+
+  &__item-heading {
+    margin-bottom: 9px;
+    font-size: $fs24;
+    font-weight: $fw700;
+    line-height: 110%;
+  }
+
+  &__item-jobtitle {
+    margin-bottom: 24px;
+    font-size: $fs20;
+    font-weight: $fw500;
+    line-height: 130%;
+  }
+
+  &__flag {
+    margin-bottom: 13px;
+    width: max-content;
+    white-space: nowrap;
+    background-color: $colorF4F35A;
+    padding: 7px 13px;
+  }
+
+  &__flag,
+  &__experience-list {
+    font-size: $fs16;
+    font-weight: $fw500;
+    line-height: 130%;
+  }
+
+  &__experience-list {
+    padding-left: 15px;
+    list-style: disc;
+  }
+
+  @media (max-width: 1620px) {
+    margin-bottom: 120px;
+
+    &__img {
+      height: 418px;
+      margin-bottom: 42px;
+    }
+
+    &__item-content {
+      padding: 0;
+    }
+
+    &__item-jobtitle {
+      margin-bottom: 28px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom: 95px;
+
+    &__container {
+      padding: 0 20px;
+    }
+
+    &__heading {
+      margin-bottom: 40px;
+    }
+
+    &__list-item:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &__img {
+      height: 333px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 65px;
+
+    &__container {
+      padding: 0 60px;
+    }
+
+    &__heading {
+      margin-bottom: 49px;
+    }
+
+    &__list {
+      @include flexColumn();
+    }
+
+    &__list-item {
+      width: 100%;
+      align-items: start;
+    }
+
+    &__list-item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      height: 500px;
+    }
+
+    &__item-content {
+      padding: 0;
+      width: 100%;
+    }
+
+    &__item-jobtitle {
+      margin-bottom: 21px;
+    }
+
+    &__flag {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__heading {
+      padding: 0 24px;
+      margin-bottom: 58px;
+    }
+
+    &__container {
+      padding: 0;
+    }
+
+    &__img {
+      height: 333px;
+      margin-bottom: 30px;
+    }
+
+    &__item-content {
+      padding: 0 30px;
+      width: 100%;
+    }
+
+    &__item-jobtitle {
+      margin-bottom: 28px;
+    }
+  }
+}

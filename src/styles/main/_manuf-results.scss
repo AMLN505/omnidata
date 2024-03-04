@@ -1,0 +1,85 @@
+@import '../general/mixin.scss';
+
+.manuf-results {
+  @include results();
+
+  &__container {
+    background-image: url('../images/svg/manuf_back.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  &__heading {
+    justify-self: start;
+    hyphens: auto;
+  }
+
+  &__improvement-value {
+    color: $colorA4A4A4;
+  }
+
+  &__text {
+    display: none;
+  }
+
+  @media (max-width: 1280px) {
+    &__heading {
+      margin-bottom: 314px;
+    }
+
+    &__container {
+      background-image: none;
+      overflow: hidden;
+    }
+
+    &__improvement-item:first-child {
+      @include relative();
+      margin-bottom: 212px;
+    }
+
+    &__improvement-item:first-child &__improvement-value {
+      color: $colorFFFFFF;
+    }
+
+    &__improvement-item:first-child::before {
+      @include absolute();
+      content: '';
+      z-index: -1;
+      top: -310px;
+      right: -140%;
+      bottom: -80px;
+      left: -120%;
+      background-image: url('../images/svg/manuf_back-2.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left 350px bottom -100px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__heading {
+      max-width: 300px;
+      margin-bottom: 136px;
+    }
+
+    &__improvement-item:first-child {
+      margin-bottom: 200px;
+    }
+
+    &__improvement-heading {
+      max-width: 160px;
+    }
+
+    &__improvement-item:first-child::before {
+      top: -200px;
+      bottom: -100px;
+      left: -200%;
+      background-position: left 350px bottom -100px;
+    }
+
+    &__text {
+      display: inline;
+    }
+  }
+}

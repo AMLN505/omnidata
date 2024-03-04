@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Omnidata - О нас</title>
+
+  <link rel="stylesheet" href="./style/swiper.min.css">
+  <link rel="stylesheet" href="./style/about.css">
+
+  <script defer src="./js/swiper.min.js"></script>
+  <!-- <script defer src="./js/popper.min.js"></script>
+  <script defer src="./js/tippy.min.js"></script> -->
+  <script defer src="./js/gsap.min.js"></script>
+  <script defer src="./js/general.js"></script>
+  <script defer src="./js/about.js"></script>
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="header__container">
+      <button class="header__burger">
+        <svg class="header__burger-img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+      </button>
+			<a href="./" class="header__logo">
+        <img class="header__logo-img" src="./images/svg/logo.svg" alt="Логотип Omnidata">
+			</a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="./" class="menu__link">Продукты</a>
+          </li>
+          <li class="menu__item">
+            <a href="./about.html" class="menu__link">Мы</a>
+          </li>
+          <li class="menu__item">
+            <a href="./" class="menu__link">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a href="./" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button data-trigger="form" class="header__button">
+        Записаться на демо
+          <svg class="header__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+          </svg>
+      </button>
+		</div>
+	</header>
+	<main>
+    <section class="hero">
+      <div class="hero__container">
+        <ul class="hero__flags-list">
+          <li class="hero__flags-item">
+            <img class="hero__flag-img" src="./images/svg/skolkovo.svg" alt="Сколково">
+          </li>
+          <li class="hero__flags-item">
+            <img class="hero__flag-img" src="./images/svg/rrpo.svg" alt="РРПО">
+          </li>
+        </ul>
+        <h1 class="hero__heading">
+          Автоматизируем бизнес-процессы ритейлера
+        </h1>
+        <p class="hero__descr">
+          Помогаем построить data-driven системы управления мастер-данными, взаимодействия с&nbsp;подрядчиками и&nbsp;управления собственной торговой маркой
+        </p>
+        <div class="hero__swiper swiper">
+          <div class="hero__swiper-wrapper swiper-wrapper">
+            <div class="hero__swiper-slide swiper-slide">
+              <h2 class="hero__swiper-slide-heading">
+                Omnidata.<span class="hero__selected-text">SRM</span>&nbsp;&mdash; портал поставщика
+              </h2>
+              <img class="hero__swiper-slide-image" src="./images/about-hero-back-1.png" alt="Иллюстрация SRM">
+            </div>
+            <div class="hero__swiper-slide swiper-slide">
+              <h2 class="hero__swiper-slide-heading">
+                Omnidata.<span class="hero__selected-text">MDM</span>&nbsp;&mdash; хранение и&nbsp;управление мастер-данными
+              </h2>
+              <img class="hero__swiper-slide-image" src="./images/about-hero-back-2.png" alt="Иллюстрация MDM">
+            </div>
+            <div class="hero__swiper-slide swiper-slide">
+              <h2 class="hero__swiper-slide-heading">
+                Omnidata.<span class="hero__selected-text">PLM</span>&nbsp;&mdash; управление собственными торговыми марками и&nbsp;коллекциями
+              </h2>
+              <img class="hero__swiper-slide-image" src="./images/about-hero-back-3.png" alt="Иллюстрация PLM">
+            </div>
+          </div>
+          <div class="swiper-pagination hero__swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section class="why">
+      <div class="why__container">
+        <h2 class="why__heading">
+          Зачем оптимизировать, если все работает в&nbsp;Excel?
+        </h2>
+        <p class="why__descr">
+          Мы&nbsp;создали Omnidata в&nbsp;2021&nbsp;году, когда поняли, что на&nbsp;российском рынке нет решений по&nbsp;управлению данными и&nbsp;процессами в&nbsp;ритейле, закрывающих реальные потребности.
+          <br>
+          <br>
+          Игроки на&nbsp;рынке использовали либо дорогостоящие зарубежные решения, либо неоптимизируемые и&nbsp;малоконтролируемые инструменты учета и&nbsp;коммуникации.
+        </p>
+      </div>
+    </section>
+    <section class="clients">
+      <div class="clients__container">
+        <h2 class="clients__heading">
+          Нам доверяют
+        </h2>
+        <div class="clients__swiper swiper">
+          <div class="clients__swiper-wrapper swiper-wrapper">
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/magnit_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/lamoda_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/nestle_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/maria_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/diksi_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/ugmpk_logo.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+		</section>
+    <section class="leaders">
+      <div class="leaders__container">
+        <h2 class="leaders__heading">
+          Лидершип
+        </h2>
+        <ul class="leaders__list">
+          <li class="leaders__list-item">
+            <img class="leaders__img" src="./images/leaders-2.jpg" alt="Аксенов Алексей">
+            <div class="leaders__item-content">
+              <h3 class="leaders__item-heading">
+                Алексей Аксенов
+              </h3>
+              <h4 class="leaders__item-jobtitle">
+                Chief Executive Officer
+              </h4>
+              <p class="leaders__flag">
+                Развитие бизнеса и&nbsp;продажи
+              </p>
+              <ul class="leaders__experience-list">
+                <li class="leaders__experience-item">
+                  Опыт развития стартапа до&nbsp;миллиардного международного бизнеса
+                </li>
+                <li class="leaders__experience-item">
+                  Опыт в&nbsp;Big Sales от&nbsp;$100M
+                </li>
+                <li class="leaders__experience-item">
+                  20&nbsp;лет в&nbsp;ИТ
+                </li>
+                <li class="leaders__experience-item">
+                  Степень MBA в&nbsp;University of&nbsp;Cambridge
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="leaders__list-item">
+            <img class="leaders__img" src="./images/leaders-2.jpg" alt="Аксенов Алексей">
+            <div class="leaders__item-content">
+              <h3 class="leaders__item-heading">
+                Алексей Аксенов
+              </h3>
+              <h4 class="leaders__item-jobtitle">
+                Chief Executive Officer
+              </h4>
+              <p class="leaders__flag">
+                Развитие бизнеса и&nbsp;продажи
+              </p>
+              <ul class="leaders__experience-list">
+                <li class="leaders__experience-item">
+                  Опыт развития стартапа до&nbsp;миллиардного международного бизнеса
+                </li>
+                <li class="leaders__experience-item">
+                  Опыт в&nbsp;Big Sales от&nbsp;$100M
+                </li>
+                <li class="leaders__experience-item">
+                  20&nbsp;лет в&nbsp;ИТ
+                </li>
+                <li class="leaders__experience-item">
+                  Степень MBA в&nbsp;University of&nbsp;Cambridge
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="leaders__list-item">
+            <img class="leaders__img" src="./images/leaders-2.jpg" alt="Аксенов Алексей">
+            <div class="leaders__item-content">
+              <h3 class="leaders__item-heading">
+                Алексей Аксенов
+              </h3>
+              <h4 class="leaders__item-jobtitle">
+                Chief Executive Officer
+              </h4>
+              <p class="leaders__flag">
+                Развитие бизнеса и&nbsp;продажи
+              </p>
+              <ul class="leaders__experience-list">
+                <li class="leaders__experience-item">
+                  Опыт развития стартапа до&nbsp;миллиардного международного бизнеса
+                </li>
+                <li class="leaders__experience-item">
+                  Опыт в&nbsp;Big Sales от&nbsp;$100M
+                </li>
+                <li class="leaders__experience-item">
+                  20&nbsp;лет в&nbsp;ИТ
+                </li>
+                <li class="leaders__experience-item">
+                  Степень MBA в&nbsp;University of&nbsp;Cambridge
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__container">
+        <h2 class="advantages__heading">
+          Плюсы работы с нами
+        </h2>
+        <ul class="advantages__list">
+          <li class="advantages__list-item advantages__list-item_1">
+            <h3 class="advantages__item-heading">
+              Технологичность
+            </h3>
+            <p class="advantages__item-descr">
+              Современный и&nbsp;тщательно проработанный стек, поддерживаемый командой из&nbsp;более чем 20&nbsp;разработчиков. Уровень продуктов соответствует мировому стандарту
+            </p>
+          </li>
+          <li class="advantages__list-item advantages__list-item_2">
+            <h3 class="advantages__item-heading">
+              Гибкость и&nbsp;адаптация
+            </h3>
+            <p class="advantages__item-descr">
+              Пилотные проекты на&nbsp;ваших задачах и&nbsp;по&nbsp;вашим бизнес-правилам. Не&nbsp;нашли нужного функционала в&nbsp;продукте? Мы&nbsp;бесплатно дополним им&nbsp;продукт            </p>
+          </li>
+          <li class="advantages__list-item advantages__list-item_3">
+            <h3 class="advantages__item-heading">
+              Забота о&nbsp;клиенте
+            </h3>
+            <p class="advantages__item-descr">
+              Не&nbsp;вендор, а&nbsp;стартап&nbsp;&mdash; мы&nbsp;будем работать на&nbsp;успех вашего проекта. Каждый проект&nbsp;&mdash; приоритетный            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="support">
+      <div class="support__container">
+        <h2 class="support__heading">
+          При поддержке ведущих фондов
+        </h2>
+        <div class="support__grid">
+          <img class="support__logo" src="./images/svg/apkit_logo.svg" alt="АПКИТ Логотип">
+          <img class="support__logo" src="./images/svg/skolkovo.svg" alt="Сколково Логотип">
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <div class="partners__container">
+        <h2 class="partners__heading">
+          Наши партнеры
+        </h2>
+        <div class="partners__grid">
+          <img class="partners__logo" src="./images/svg/softline_logo.svg" alt="Softline Логотип">
+          <img class="partners__logo" src="./images/svg/integration_logo.svg" alt="Интеграция Логотип">
+          <img class="partners__logo" src="./images/svg/ycloud_logo.svg" alt="Яндекс Облако Логотип">
+          <img class="partners__logo" src="./images/svg/rnt_logo.svg" alt="RNT Логотип">
+        </div>
+      </div>
+    </section>
+    <section class="join-us">
+      <div class="join-us__container">
+        <h2 class="join-us__heading">
+          Присоединяйтесь к&nbsp;команде
+        </h2>
+        <p class="join-us__descr">
+          Систематизируйте, контролируйте, автоматизируйте работу с&nbsp;большими данными, взаимодействие с&nbsp;подрядчиками и&nbsp;управление собственной торговой маркой
+        </p>
+        <a href="./" class="join-us__button">
+          Вакансии
+          <svg class="join-us__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="dialog">
+      <dialog data-modal="form" class="dialog__form dialog-form">
+        <div class="dialog-form__wrapper">
+          <h2 class="dialog-form__heading">
+            Запись на&nbsp;демо
+          </h2>
+          <form action="" class="dialog-form__form modal-form">
+            <label for="modal-name" class="modal-form__label">
+              <p class="modal-form__flag">
+                Имя
+              </p>
+              <input type="text" class="modal-form__input" name="name" id="modal-name">
+            </label>
+            <label for="modal-email" class="modal-form__label">
+              <p class="modal-form__flag">
+                Корпоративный e-mail
+              </p>
+              <input type="email" class="modal-form__input" name="email" id="modal-email">
+            </label>
+            <label for="modal-comment" class="modal-form__label">
+              <p class="modal-form__flag">
+                Ваши задачи &mdash; на их основе мы подготовимся к демо
+              </p>
+              <textarea class="modal-form__comment" name="comment" id="modal-comment"></textarea>
+            </label>
+            <button type="submit" class="modal-form__button" disabled>
+              <span class="modal-form__button-submit-content">
+                Записаться
+                <svg class="modal-form__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="modal-form__button-success-content">
+                Отправлено
+                <svg class="modal-form__button-img" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33073 2.99837C5.38521 2.99837 2.9974 5.38619 2.9974 8.33171C2.9974 11.2772 5.38521 13.665 8.33073 13.665C11.2762 13.665 13.6641 11.2772 13.6641 8.33171C13.6641 5.38619 11.2762 2.99837 8.33073 2.99837ZM1.66406 8.33171C1.66406 4.64981 4.64883 1.66504 8.33073 1.66504C12.0126 1.66504 14.9974 4.64981 14.9974 8.33171C14.9974 12.0136 12.0126 14.9984 8.33073 14.9984C4.64883 14.9984 1.66406 12.0136 1.66406 8.33171ZM11.4479 5.84027C11.7193 6.08906 11.7376 6.51078 11.4888 6.78219L7.82217 10.7822C7.69219 10.924 7.5073 11.0027 7.31499 10.9982C7.12269 10.9936 6.94172 10.9063 6.81858 10.7585L5.15192 8.7585C4.91621 8.47564 4.95442 8.05527 5.23727 7.81956C5.52012 7.58385 5.9405 7.62207 6.17621 7.90492L7.35464 9.31903L10.506 5.88122C10.7548 5.60981 11.1765 5.59147 11.4479 5.84027Z" fill="white"/>
+                </svg>
+              </span>
+            </button>
+          </form>
+          <button class="dialog-form__close-button" data-action="close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </section>
+		<footer class="footer">
+      <div class="footer__container">
+        <a href="./" class="footer__logo">
+          <img class="footer__logo-img" src="./images/svg/logo.svg" alt="Логотип Omnidata">
+        </a>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Продукты
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Индустриальные решения
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Контакты
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Блог
+            </a>
+          </li>
+        </ul>
+        <div class="footer__divider"></div>
+        <ul class="footer__contacts-list">
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/telegram.svg" alt="">
+            <a href="https://t.me/AlxAksenov" class="footer__contact-link">
+              @AlxAksenov Алексей Аксенов, генеральный директор
+            </a>
+          </li>
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/geo.svg" alt="">
+            г. Москва, 119021, Зубовский бульвар, д.&nbsp;17, стр.&nbsp;1, офис 517
+          </li>
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/email.svg" alt="">
+            <a href="mailto:a@omnidata.ru" class="footer__contact-link">
+              a@omnidata.ru
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__info">
+          <li class="footer__info-item">
+            ООО &laquo;Омнидата&raquo; 2023
+          </li>
+          <li class="footer__info-item">
+            <a class="footer__info-link" href="https://techomnidata.ru/">
+              Omnidata.technologies
+            </a>
+          </li>
+          <li class="footer__info-item">
+            <a href="./" class="footer__info-link">
+              Политика обработки персональных данных
+            </a>
+          </li>
+        </ul>
+        <a href="#header" class="footer__link">
+          <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.381638 16.1145L16.4961 0L32.5851 16.089L29.8655 18.8595L18.4786 7.47264L18.4532 36.9819H14.4881L14.5136 7.47263L3.15211 18.8849L0.381638 16.1145Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <button class="footer__close-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+		</footer>
+	</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import '../general/mixin.scss';
+
+.clients {
+  margin-bottom: 113px;
+  @include clientsBlock();
+
+  @media (max-width: 1620px) {
+    margin-bottom: 97px;
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom: 60px;
+  }
+}

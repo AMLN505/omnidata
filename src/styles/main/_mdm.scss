@@ -1,0 +1,29 @@
+@import '../general/mixin.scss';
+
+.mdm {
+  @include product();
+  background-color: $colorDDD;
+
+  &__button-item:first-child &__button{
+    @include orangeButton();
+  }
+
+  &__button-item:last-child &__button{
+    @include whiteButton();
+    border-color: $colorFC4807;
+  }
+}
+
+.mdm-illustration {
+  background-color: $colorCCC;
+  padding: 50px;
+
+  &__img {
+    width: 100%;
+    height: max-content;
+  }
+
+  @media (max-width: 1620px) {
+    padding: 30px;
+  }
+}

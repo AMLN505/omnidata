@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Omnidata - автоматизация ритейла</title>
+
+  <link rel="stylesheet" href="./style/swiper.min.css">
+  <link rel="stylesheet" href="./style/main.css">
+
+  <script defer src="./js/swiper.min.js"></script>
+  <script defer src="./js/popper.min.js"></script>
+  <script defer src="./js/tippy.min.js"></script>
+  <script defer src="./js/gsap.min.js"></script>
+  <script defer src="./js/general.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+	<header class="header" id="header">
+		<div class="header__container">
+      <button class="header__burger">
+        <svg class="header__burger-img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 7H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 12H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 17H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+      </button>
+			<a href="./" class="header__logo">
+        <img class="header__logo-img" src="./images/svg/logo.svg" alt="Логотип Omnidata">
+			</a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="./" class="menu__link">Продукты</a>
+          </li>
+          <li class="menu__item">
+            <a href="./about.html" class="menu__link">Мы</a>
+          </li>
+          <li class="menu__item">
+            <a href="./" class="menu__link">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a href="./" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button data-trigger="form" class="header__button">
+        Записаться на демо
+          <svg class="header__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+          </svg>
+      </button>
+		</div>
+	</header>
+	<main>
+		<section class="hero">
+      <div class="hero__container">
+        <ul class="hero__flags-list">
+          <li class="hero__flags-item">
+            <img class="hero__flag-img" src="./images/svg/skolkovo.svg" alt="Сколково">
+          </li>
+          <li class="hero__flags-item">
+            <img class="hero__flag-img" src="./images/svg/rrpo.svg" alt="РРПО">
+          </li>
+        </ul>
+        <h1 class="hero__heading">
+          <span class="hero__selected-text">AI</span>&nbsp;Автоматизация ритейла
+        </h1>
+        <ul class="hero__list">
+          <li class="hero__list-item">PLM</li>
+          <li class="hero__list-item">SRM</li>
+          <li class="hero__list-item">MDM</li>
+          <li class="hero__list-item">Заказная разработка</li>
+        </ul>
+        <p class="hero__descr">
+          Систематизируйте, контролируйте, автоматизируйте работу с&nbsp;большими данными, взаимодействие с&nbsp;подрядчиками и&nbsp;управление собственной торговой маркой
+        </p>
+        <button data-trigger="form" class="hero__button">
+          Записаться на демо
+          <svg class="hero__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <img class="hero__img" src="./images/svg/hero_back.svg" alt="">
+      </div>
+		</section>
+		<section class="clients">
+      <div class="clients__container">
+        <div class="clients__swiper swiper">
+          <div class="clients__swiper-wrapper swiper-wrapper">
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/magnit_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/lamoda_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/nestle_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/maria_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/diksi_logo.svg" alt="">
+            </div>
+            <div class="clients__swiper-slide swiper-slide">
+              <img class="clients__swiper-img" src="./images/svg/ugmpk_logo.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+		</section>
+		<section class="products">
+      <ul class="products__control">
+        <li class="products__control-item" >
+          <button data-slide-target="0" class="products__control-button active" id="food">
+            Food
+          </button>
+        </li>
+        <li class="products__control-item">
+          <button data-slide-target="1" class="products__control-button" id="fashion">
+            Fashion
+          </button>
+        </li>
+        <li class="products__control-item" >
+          <button data-slide-target="2" class="products__control-button" id="diy">
+            DIY
+          </button>
+        </li>
+        <li class="products__control-item">
+          <button data-slide-target="3" class="products__control-button" id="more">
+            More
+          </button>
+        </li>
+      </ul>
+      <div class="products__container">
+        <div class="products__swiper swiper">
+          <div class="products__swiper-wrapper swiper-wrapper">
+            <div class="products__swiper-slide swiper-slide">
+              <div class="products__slide-container">
+                <h2 class="products__heading">
+                  Food Retail
+                </h2>
+                <ul class="products__flags-list">
+                  <li class="products__flag-item">
+                    MDM
+                  </li>
+                  <li class="products__flag-item">
+                    PLM
+                  </li>
+                  <li class="products__flag-item">
+                    SRM
+                  </li>
+                </ul>
+                  <p class="products__descr">
+                    Коробочное решение для фудового ритейла, основанное на&nbsp;опыте внедрения крупнейших игроков на&nbsp;рынке. Управление мастер-данными, работа с&nbsp;подрядчиками и&nbsp;управление собственной торговой маркой, учитывающие требования рынка
+                  </p>
+                  <button class="products__button">
+                    <span class="products__button-text products__button-text_desc">Подробнее о решениях для моей индустрии</span><span class="products__button-text products__button-text_mob">Решение для индустрии</span>
+                    <svg class="products__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                    </svg>
+                  </button>
+                  <img class="products__img" src="./images/food_back.jpg" alt="">
+              </div>
+            </div>
+            <div class="products__swiper-slide swiper-slide">
+              <div class="products__slide-container">
+                <h2 class="products__heading">
+                  Fashion Retail
+                </h2>
+                <ul class="products__flags-list">
+                  <li class="products__flag-item">
+                    MDM
+                  </li>
+                  <li class="products__flag-item">
+                    PLM
+                  </li>
+                  <li class="products__flag-item">
+                    SRM
+                  </li>
+                </ul>
+                  <p class="products__descr">
+                    Ведите реестр собственных торговых марок с&nbsp;возможностями отслеживания статусов и&nbsp;централизованным хранилищем документов
+                  </p>
+                  <button class="products__button">
+                    <span class="products__button-text products__button-text_desc">Подробнее о решениях для моей индустрии</span><span class="products__button-text products__button-text_mob">Решение для индустрии</span>
+                    <svg class="products__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                    </svg>
+                  </button>
+                  <img class="products__img" src="./images/fashion_back.jpg" alt="">
+              </div>
+            </div>
+            <div class="products__swiper-slide swiper-slide">
+              <div class="products__slide-container">
+                <h2 class="products__heading">
+                  DIY Retail
+                </h2>
+                <ul class="products__flags-list">
+                  <li class="products__flag-item">
+                    MDM
+                  </li>
+                  <li class="products__flag-item">
+                    PLM
+                  </li>
+                  <li class="products__flag-item">
+                    SRM
+                  </li>
+                </ul>
+                  <p class="products__descr">
+                    Ведите реестр собственных торговых марок с&nbsp;возможностями отслеживания статусов и&nbsp;централизованным хранилищем документов
+                  </p>
+                  <button class="products__button">
+                    <span class="products__button-text products__button-text_desc">Подробнее о решениях для моей индустрии</span><span class="products__button-text products__button-text_mob">Решение для индустрии</span>
+                    <svg class="products__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                    </svg>
+                  </button>
+                  <img class="products__img" src="./images/DIY_back.jpg" alt="">
+              </div>
+            </div>
+            <div class="products__swiper-slide swiper-slide products__swiper-slide_more">
+              <div class="products__slide-container">
+                <h2 class="products__heading">
+                  Не&nbsp;нашли свою индустрию?
+                </h2>
+                <p class="products__descr">
+                  Давайте проведем демо. Узнаем о&nbsp;ваших потребностях и&nbsp;расскажем о&nbsp;релевантном опыте решения аналогичных задач
+                </p>
+                <button data-trigger="form" class="products__button">
+                  Записаться на демо
+                  <svg class="products__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                  </svg>
+                </button>
+                <img class="products__img" src="./images/more_back.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="products__plm plm">
+        <div class="plm__container">
+          <h2 class="plm__main-heading">
+            Продукты Омнидата
+          </h2>
+          <h3 class="plm__heading">
+            PLM
+          </h3>
+          <p class="plm__tag">
+            Управление собственной торговой маркой
+          </p>
+          <p class="plm__descr">
+            Ведите реестр собственных торговых марок с&nbsp;возможностями отслеживания статусов и&nbsp;централизованным хранилищем документов
+          </p>
+          <ul class="plm__buttons-list">
+            <li class="plm__button-item">
+              <button data-trigger="form" class="plm__button">
+                Записаться на демо
+                <svg class="plm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+            <li class="plm__button-item">
+              <button class="plm__button">
+                <span class="plm__button-text plm__button-text_desc">Подробнее о продукте</span><span class="plm__button-text plm__button-text_mob">Подробнее</span>
+                <svg class="plm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="plm__illustration plm-illustration">
+            <div class="plm-illustration__head">
+              <img class="plm-illustration__head-img" src="./images/svg/plm_head-2.svg" alt="">
+            </div>
+            <div class="plm-illustration__body">
+              <div class="plm-illustration__images" id="plm-image">
+                <img class="plm-illustration__circle" src="./images/svg/plm_circle.svg" alt="" data-turn="0">
+                  <ul class="plm-illustration__sector-list">
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="1" id="tooltip-button-1">
+                        1
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="1" id="tooltip-sector-1">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-1">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 1
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 1
+                        </p>
+                      </div>
+                    </li>
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="2" id="tooltip-button-2">
+                        2
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="2" id="tooltip-sector-2">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-2">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 2
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 2
+                        </p>
+                      </div>
+                    </li>
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="3" id="tooltip-button-3">
+                        3
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="3" id="tooltip-sector-3">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-3">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 3
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 3
+                        </p>
+                      </div>
+                    </li>
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="4" id="tooltip-button-4">
+                        4
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="4" id="tooltip-sector-4">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-4">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 4
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 4
+                        </p>
+                      </div>
+                    </li>
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="5" id="tooltip-button-5">
+                        5
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="5" id="tooltip-sector-5">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-5">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 5
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 5
+                        </p>
+                      </div>
+                    </li>
+                    <li class="plm-illustration__sector-item">
+                      <button class="plm-illustration__button" data-target="6" id="tooltip-button-6">
+                        6
+                        <h4 class="plm-illustration__button-heading"></h4>
+                      </button>
+                      <svg class="plm-illustration__sector-part" width="191" height="69" viewBox="0 0 191 69" fill="none" xmlns="http://www.w3.org/2000/svg"  data-target="6" id="tooltip-sector-6">
+                        <path class="plm-illustration__sector-path" d="M25.5618 38.991L25.0608 68.2688C67.4873 45.9439 119.702 44.4149 164.849 68.1987L190.472 53.9681L189.995 24.9051C128.809 -8.13881 57.5699 -6.01854 0.13272 24.8755L25.5618 38.991Z" fill="transparent"/>
+                      </svg>
+                      <div class="plm-illustration__tooltip plm-tooltip" id="tooltip-content-6">
+                        <h4 class="plm-tooltip__heading">
+                          Заголовок 6
+                        </h4>
+                        <p class="plm-tooltip__descr">
+                          Текст тултипа 6
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products_srm srm">
+        <div class="srm__container">
+          <h3 class="srm__heading">
+            SRM
+          </h3>
+          <p class="srm__tag">
+            Управление работой с&nbsp;поставщиками
+          </p>
+          <p class="srm__descr">
+            Автоматизация коммерческих товарных закупок для крупного ритейла и&nbsp;производства
+          </p>
+          <ul class="srm__buttons-list">
+            <li class="srm__button-item">
+              <button data-trigger="form" class="srm__button">
+                Записаться на демо
+                <svg class="srm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+            <li class="srm__button-item">
+              <button class="srm__button">
+                <span class="srm__button-text srm__button-text_desc">Подробнее о продукте</span><span class="srm__button-text srm__button-text_mob">Подробнее</span>
+                <svg class="srm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="srm__illustration srm-illustration">
+            <div class="srm-illustration__body">
+              <img class="srm-illustration__img" src="./images/svg/srm_pic.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products__mdm mdm">
+        <div class="mdm__container">
+          <h3 class="mdm__heading">
+            MDM
+          </h3>
+          <p class="mdm__tag">
+            Управление мастер-данными
+          </p>
+          <p class="mdm__descr">
+            Центр управления мастер-данными
+            по&nbsp;принципу &laquo;единого источника правды&raquo; о&nbsp;товарах, продукции, контрагентах
+          </p>
+          <ul class="mdm__buttons-list">
+            <li class="mdm__button-item">
+              <button data-trigger="form" class="mdm__button">
+                Записаться на демо
+                <svg class="mdm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+            <li class="mdm__button-item">
+              <button class="mdm__button">
+                <span class="mdm__button-text mdm__button-text_desc">Подробнее о продукте</span><span class="mdm__button-text mdm__button-text_mob">Подробнее</span>
+                <svg class="mdm__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="mdm__illustration mdm-illustration">
+            <img class="mdm-illustration__img" src="./images/svg/mdm_pic.svg" alt="">
+          </div>
+        </div>
+      </section>
+		</section>
+		<section class="food-results">
+      <div class="food-results__container">
+        <h2 class="food-results__main-heading">
+          Результаты работы <span class="food-results__selected-text">с&nbsp;Омнидата</span>
+        </h2>
+        <h3 class="food-results__heading">
+          Food, Fashion, DIY&nbsp;Retail
+        </h3>
+        <ul class="food-results__improvement-list">
+          <li class="food-results__improvement-item">
+            <h4 class="food-results__improvement-heading">
+              Ускорение запуска новинок
+            </h4>
+            <div class="food-results__improvement-value">
+              +75%
+            </div>
+          </li>
+          <li class="food-results__improvement-item">
+            <h4 class="food-results__improvement-heading">
+              Повышение выполнения планов
+            </h4>
+            <div class="food-results__improvement-value">
+              +18%
+            </div>
+          </li>
+        </ul>
+      </div>
+		</section>
+    <section class="manuf-results">
+      <div class="manuf-results__container">
+        <h3 class="manuf-results__heading">
+          Manufac<span class="manuf-results__text">-</span>turing
+        </h3>
+        <ul class="manuf-results__improvement-list">
+          <li class="manuf-results__improvement-item">
+            <h4 class="manuf-results__improvement-heading">
+              Сокращение потерь от&nbsp;ошибок
+            </h4>
+            <div class="manuf-results__improvement-value">
+              -64%
+            </div>
+          </li>
+          <li class="manuf-results__improvement-item">
+            <h4 class="manuf-results__improvement-heading">
+              Снижение себестоимости
+            </h4>
+            <div class="manuf-results__improvement-value">
+              -18%
+            </div>
+          </li>
+        </ul>
+      </div>
+		</section>
+		<section class="pilot">
+      <div class="pilot__container">
+        <h2 class="pilot__heading">
+          После&nbsp;Демо &mdash; Пилот
+        </h2>
+        <ul class="pilot__list">
+          <li class="pilot__list-item">
+            <img class="pilot__item-img" src="./images/svg/pilot-1.svg" alt="">
+            <p class="pilot__item-text">
+              <span class="pilot__selected-text">Определим, что важно</span> для вашего бизнеса и&nbsp;какие особенности его функционирования важно отразить в&nbsp;платформе
+            </p>
+          </li>
+          <li class="pilot__list-item">
+            <img class="pilot__item-img" src="./images/svg/pilot-2.svg" alt="">
+            <p class="pilot__item-text">
+              За&nbsp;несколько недель мы <span class="pilot__selected-text">подготовим продукт под вас</span> с&nbsp;учетом необходимых интеграций, форматов отчетностей и&nbsp;переменных. Возьмем из&nbsp;шаблонов, с&nbsp;которыми вы&nbsp;стандартно работаете
+            </p>
+          </li>
+          <li class="pilot__list-item">
+            <img class="pilot__item-img" src="./images/svg/pilot-3.svg" alt="">
+            <p class="pilot__item-text">
+              <span class="pilot__selected-text">Проведем обучение</span> сотрудников, чтобы они не&nbsp;саботировали переход в&nbsp;новый стэк
+            </p>
+          </li>
+          <li class="pilot__list-item">
+            <img class="pilot__item-img" src="./images/svg/pilot-4.svg" alt="">
+            <p class="pilot__item-text">
+              <span class="pilot__selected-text">Выдадим доступы к продукту</span> на&nbsp;месяц
+            </p>
+          </li>
+        </ul>
+        <button class="pilot__button">
+          Как проходит пилот
+          <svg class="pilot__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+		</section>
+		<section class="demo">
+      <div class="demo__container">
+        <h2 class="demo__main-heading">
+          Демо
+        </h2>
+        <h3 class="demo__heading">
+          Обсудим возможности оптимизации ваших процессов <span class="demo__text">на <span class="demo__selected-text">демо</span></span>
+        </h3>
+        <p class="demo__descr">
+          Уже на&nbsp;первом демо с&nbsp;вами будет общаться продакт Омнидата. Он&nbsp;узнает о&nbsp;потребностях вашего бизнеса и&nbsp;расскажет, как мы&nbsp;можем помочь с&nbsp;оптимизацией процессов
+        </p>
+        <form action="" class="demo__form demo-form">
+          <label for="name" class="demo-form__label">
+            <p class="demo-form__flag">
+              Имя
+            </p>
+            <input type="text" class="demo-form__input" name="name" id="name">
+          </label>
+          <label for="email" class="demo-form__label">
+            <p class="demo-form__flag">
+              Корпоративный e-mail
+            </p>
+            <input type="email" class="demo-form__input" name="email" id="email">
+          </label>
+          <label for="comment" class="demo-form__label">
+            <p class="demo-form__flag">
+              Ваши задачи &mdash; на их основе мы подготовимся к демо
+            </p>
+            <textarea class="demo-form__comment" name="comment" id="comment"></textarea>
+          </label>
+          <label class="demo-form__label demo-form__label_checkbox" for="demo-checkbox">
+            <input class="demo-form__checkbox" type="checkbox" name="demo-checkbox" id="demo-checkbox">
+            <span class="demo-form__checkbox-span"></span>
+            <span class="demo-form__checkbox-text">
+              Я принимаю условия
+            </span>
+            <a href="#" class="demo-form__checkbox-link">
+              политики обработки персональных данных
+            </a>
+          </label>
+          <button type="submit" class="demo-form__button" disabled>
+            <span class="demo-form__button-submit-content">
+              Записаться на демо
+              <svg class="demo-form__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="demo-form__button-success-content">
+              Запрос отправлен
+              <svg class="demo-form__button-img" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33073 2.99837C5.38521 2.99837 2.9974 5.38619 2.9974 8.33171C2.9974 11.2772 5.38521 13.665 8.33073 13.665C11.2762 13.665 13.6641 11.2772 13.6641 8.33171C13.6641 5.38619 11.2762 2.99837 8.33073 2.99837ZM1.66406 8.33171C1.66406 4.64981 4.64883 1.66504 8.33073 1.66504C12.0126 1.66504 14.9974 4.64981 14.9974 8.33171C14.9974 12.0136 12.0126 14.9984 8.33073 14.9984C4.64883 14.9984 1.66406 12.0136 1.66406 8.33171ZM11.4479 5.84027C11.7193 6.08906 11.7376 6.51078 11.4888 6.78219L7.82217 10.7822C7.69219 10.924 7.5073 11.0027 7.31499 10.9982C7.12269 10.9936 6.94172 10.9063 6.81858 10.7585L5.15192 8.7585C4.91621 8.47564 4.95442 8.05527 5.23727 7.81956C5.52012 7.58385 5.9405 7.62207 6.17621 7.90492L7.35464 9.31903L10.506 5.88122C10.7548 5.60981 11.1765 5.59147 11.4479 5.84027Z" fill="white"/>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+		</section>
+    <!-- <section class="news">
+		</section>
+		<section class="useful">
+		</section> -->
+    <section class="dialog">
+      <dialog data-modal="form" class="dialog__form dialog-form">
+        <div class="dialog-form__wrapper">
+          <h2 class="dialog-form__heading">
+            Запись на&nbsp;демо
+          </h2>
+          <form action="" class="dialog-form__form modal-form">
+            <label for="modal-name" class="modal-form__label">
+              <p class="modal-form__flag">
+                Имя
+              </p>
+              <input type="text" class="modal-form__input" name="name" id="modal-name">
+            </label>
+            <label for="modal-email" class="modal-form__label">
+              <p class="modal-form__flag">
+                Корпоративный e-mail
+              </p>
+              <input type="email" class="modal-form__input" name="email" id="modal-email">
+            </label>
+            <label for="modal-comment" class="modal-form__label">
+              <p class="modal-form__flag">
+                Ваши задачи &mdash; на их основе мы подготовимся к демо
+              </p>
+              <textarea class="modal-form__comment" name="comment" id="modal-comment"></textarea>
+            </label>
+            <button type="submit" class="modal-form__button" disabled>
+              <span class="modal-form__button-submit-content">
+                Записаться
+                <svg class="modal-form__button-img" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.551 2.48104C14.158 2.06996 14.158 1.40347 14.551 0.992391C14.944 0.581312 15.5811 0.581312 15.9741 0.992391L22.0118 7.30818C22.4048 7.71926 22.4048 8.38575 22.0118 8.79683L15.9741 15.1126C15.5811 15.5237 14.944 15.5237 14.551 15.1126C14.158 14.7015 14.158 14.035 14.551 13.624L18.8709 9.10512H1.18536C0.623469 9.10512 0.167969 8.63384 0.167969 8.05249C0.167969 7.47114 0.623469 6.99986 1.18536 6.99986H18.8709L14.551 2.48104Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="modal-form__button-success-content">
+                Отправлено
+                <svg class="modal-form__button-img" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33073 2.99837C5.38521 2.99837 2.9974 5.38619 2.9974 8.33171C2.9974 11.2772 5.38521 13.665 8.33073 13.665C11.2762 13.665 13.6641 11.2772 13.6641 8.33171C13.6641 5.38619 11.2762 2.99837 8.33073 2.99837ZM1.66406 8.33171C1.66406 4.64981 4.64883 1.66504 8.33073 1.66504C12.0126 1.66504 14.9974 4.64981 14.9974 8.33171C14.9974 12.0136 12.0126 14.9984 8.33073 14.9984C4.64883 14.9984 1.66406 12.0136 1.66406 8.33171ZM11.4479 5.84027C11.7193 6.08906 11.7376 6.51078 11.4888 6.78219L7.82217 10.7822C7.69219 10.924 7.5073 11.0027 7.31499 10.9982C7.12269 10.9936 6.94172 10.9063 6.81858 10.7585L5.15192 8.7585C4.91621 8.47564 4.95442 8.05527 5.23727 7.81956C5.52012 7.58385 5.9405 7.62207 6.17621 7.90492L7.35464 9.31903L10.506 5.88122C10.7548 5.60981 11.1765 5.59147 11.4479 5.84027Z" fill="white"/>
+                </svg>
+              </span>
+            </button>
+          </form>
+          <button class="dialog-form__close-button" data-action="close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </section>
+		<footer class="footer">
+      <div class="footer__container">
+        <a href="./" class="footer__logo">
+          <img class="footer__logo-img" src="./images/svg/logo.svg" alt="Логотип Omnidata">
+        </a>
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Продукты
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Индустриальные решения
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Контакты
+            </a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="./" class="footer__menu-link">
+              Блог
+            </a>
+          </li>
+        </ul>
+        <div class="footer__divider"></div>
+        <ul class="footer__contacts-list">
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/telegram.svg" alt="">
+            <a href="https://t.me/AlxAksenov" class="footer__contact-link">
+              @AlxAksenov Алексей Аксенов, генеральный директор
+            </a>
+          </li>
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/geo.svg" alt="">
+            г. Москва, 119021, Зубовский бульвар, д.&nbsp;17, стр.&nbsp;1, офис 517
+          </li>
+          <li class="footer__contact-item">
+            <img class="footer__contact-logo" src="./images/svg/email.svg" alt="">
+            <a href="mailto:a@omnidata.ru" class="footer__contact-link">
+              a@omnidata.ru
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__info">
+          <li class="footer__info-item">
+            ООО &laquo;Омнидата&raquo; 2023
+          </li>
+          <li class="footer__info-item">
+            <a class="footer__info-link" href="https://techomnidata.ru/">
+              Omnidata.technologies
+            </a>
+          </li>
+          <li class="footer__info-item">
+            <a href="./" class="footer__info-link">
+              Политика обработки персональных данных
+            </a>
+          </li>
+        </ul>
+        <a href="#header" class="footer__link">
+          <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.381638 16.1145L16.4961 0L32.5851 16.089L29.8655 18.8595L18.4786 7.47264L18.4532 36.9819H14.4881L14.5136 7.47263L3.15211 18.8849L0.381638 16.1145Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <button class="footer__close-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+		</footer>
+	</main>
+</body>
+</html>

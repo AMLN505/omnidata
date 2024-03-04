@@ -1,0 +1,142 @@
+@import './mixin.scss';
+
+.header {
+  background-color: $color4C4C4C;
+  color: $colorFFFFFF;
+  font-size: $fs16;
+  font-weight: $fw600;
+  line-height: $fs20;
+  overflow: hidden;
+
+  &__container {
+    @include grid();
+    @include relative();
+    align-items: center;
+    grid-template-columns: 1fr 3.5fr minmax(373px, 480px);
+    grid-template-rows: 1fr;
+    gap: 150px;
+    @include container();
+    padding: 0 0 0 100px;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__burger path {
+    transition: stroke $transition-time $timing-function;
+  }
+
+  &__burger:hover,
+  &__burger:focus-visible,
+  &__burger:active {
+    color: $colorFC4807;
+  }
+
+  &__burger:hover path,
+  &__burger:focus-visible path,
+  &__burger:active path {
+    stroke: $colorFC4807;
+  }
+
+  &__logo {
+    max-width: max-content;
+  }
+
+  &__button {
+    white-space: nowrap;
+    padding: 20px 27px;
+    @include orangeButton();
+    font-size: $fs18;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 1620px) {
+    &__container {
+      grid-template-columns: 1fr 2.7fr 373px;
+      gap: 57px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__container {
+      gap: 26px;
+      grid-template-columns: max-content 1fr 373px;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__container {
+      padding: 0 0 0 60px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__container {
+      gap: 0;
+      @include flexCenterAlign();
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 27px 24px;
+    }
+
+    &__button {
+      display: none
+    }
+
+  }
+}
+
+.menu {
+
+  &__list {
+    @include grid();
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-columns: repeat(4, max-content);
+    align-items: center;
+    justify-content: space-between;
+    grid-auto-rows: 1fr;
+  }
+
+  &__link {
+    @include relative();
+    z-index: 2;
+    transition: color $transition-time $timing-function;
+  }
+
+  &__link::before {
+    @include absolute();
+    content: '';
+    z-index: -1;
+    top: -30px;
+    bottom: -30px;
+    left: -30px;
+    right: -30px;
+    background-color: transparent;
+  }
+
+  &__link.active {
+    pointer-events: none;
+  }
+
+  &__link.active::before {
+    background-color: $color2B2B2B;
+  }
+
+  &__link:hover,
+  &__link:focus-visible,
+  &__link:active {
+    color: $colorFC4807;
+  }
+
+  @media (max-width: 1280px) {
+    display: none;
+  }
+}
+
+

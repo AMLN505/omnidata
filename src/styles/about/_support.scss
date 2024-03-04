@@ -1,0 +1,22 @@
+@import '../general/mixin.scss';
+
+.support {
+  margin-bottom: 130px;
+  @include logoBlock();
+
+  &__grid {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  @media (max-width: 1620px) {
+    margin-bottom: 125px;
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom: 140px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 110px;
+  }
+}

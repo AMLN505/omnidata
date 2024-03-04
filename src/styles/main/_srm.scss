@@ -1,0 +1,60 @@
+@import '../general/mixin.scss';
+
+.srm {
+  @include product();
+
+  &__button-item:first-child &__button{
+    @include orangeButton();
+  }
+
+  &__button-item:last-child &__button{
+    @include whiteButton();
+    border-color: $colorFC4807;
+  }
+}
+
+.srm-illustration {
+  background-color: #f5f5f5;
+  padding: 50px;
+
+  &__body {
+    @include relative();
+    z-index: 1;
+    width: 100%;
+  }
+
+  &__body::before {
+    @include absolute();
+    content: '';
+    width: 106px;
+    height: 186px;
+    top: 31%;
+    right: 11%;
+    z-index: 2;
+    background-image: url('../images/milk.png');
+    background-repeat: no-repeat;
+    background-size: 106px 186px;
+  }
+
+  @media (max-width: 1620px) {
+    padding: 30px;
+
+    &__body::before {
+      width: 56px;
+      height: 98px;
+      top: 35%;
+      right: 13%;
+      background-size: 56px 98px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__body::before {
+      top: 35%;
+      right: 12.5%;
+      width: 10%;
+      height: 20%;
+      background-size: 100% 100%;
+    }
+  }
+}

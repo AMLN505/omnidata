@@ -1,0 +1,62 @@
+@import '../general/mixin.scss';
+
+.why {
+  margin-bottom: 115px;
+
+  &__container {
+    @include container();
+    @include flexColumn();
+    align-items: center;
+    text-align: center;
+    padding: 0 100px;
+  }
+
+  &__heading {
+    max-width: 1300px;
+    margin-bottom: 47px;
+    font-weight: $fw700;
+    font-size: $fs48;
+    line-height: 110%;
+  }
+
+  &__descr {
+    max-width: 1280px;
+    @include text();
+    font-weight: $fw500;
+    line-height: 130%;
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom: 95px;
+
+    &__heading {
+      margin-bottom: 63px;
+      font-size: $fs32;
+    }
+
+    &__descr {
+      max-width: 900px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 55px;
+
+    &__container {
+      padding: 0 60px;
+    }
+
+    &__heading {
+      margin-bottom: 40px;
+      font-size: $fs24;
+    }
+  }
+
+  @media (max-width: 700px) {
+    margin-bottom: 65px;
+
+    &__container {
+      padding: 0 24px;
+    }
+  }
+}

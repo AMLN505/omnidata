@@ -1,0 +1,35 @@
+@import '../general/mixin.scss';
+
+.clients {
+  margin-bottom: 160px;
+  @include clientsBlock();
+
+  &__heading {
+    margin-bottom: 120px;
+    @include blockTitle();
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom: 145px;
+
+    &__heading {
+      margin-bottom: 90px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 110px;
+
+    &__heading {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    margin-bottom: 80px;
+
+    &__heading {
+      margin-bottom: 57px;
+    }
+  }
+}
